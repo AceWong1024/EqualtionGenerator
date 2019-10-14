@@ -27,6 +27,9 @@
     <ClCompile Include="rwOperator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CheckClass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="rwOperator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckClass.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

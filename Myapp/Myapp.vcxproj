@@ -115,12 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CheckClass.cpp" />
     <ClCompile Include="equaltionGenerator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="rwOperator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CheckClass.h" />
     <ClInclude Include="equaltionGenerator.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="rwOperator.h" />
