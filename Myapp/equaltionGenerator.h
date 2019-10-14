@@ -15,6 +15,6 @@ public:
 	~EqualtionGenerator();
 	std::vector<int> getNums(int amount,int min,int max);
 	std::vector<char> getOper(int amount);
-	bool getEqual(vector<int>&, vector<char>&, vector<string>&);
+	string getEqual(vector<int>&, vector<char>&);
 };
 

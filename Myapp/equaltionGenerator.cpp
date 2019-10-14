@@ -7,7 +7,6 @@ EqualtionGenerator::EqualtionGenerator()
 	srand((int)time(NULL));
 }
 
-
 EqualtionGenerator::~EqualtionGenerator()
 {
 
@@ -30,7 +29,7 @@ std::vector<char> EqualtionGenerator::getOper(int amount) {
 	return ope;
 }
 
-bool EqualtionGenerator::getEqual(vector<int> & num, vector<char> & oper, vector<string> & equaltions) {
+string EqualtionGenerator::getEqual(vector<int> & num, vector<char> & oper) {
 	//position of brackets
 	int lbrack = -1, rbrack = -1;
 	bool flag = rander.getRanNum(0, 1) ? true : false;
@@ -65,9 +64,8 @@ bool EqualtionGenerator::getEqual(vector<int> & num, vector<char> & oper, vector
 		if (rbrack == num.size() - 1)
 			equaltion.insert(2 * rbrack, 1, ')');
 		else
-			equaltion.insert(2 * rbrack + 1, 1, ')');
+			equaltion.insert(2 * rbrack, 1, ')');
 	}
 	
-	equaltions.push_back(equaltion);
-	return true;
+	return equaltion;
 }
