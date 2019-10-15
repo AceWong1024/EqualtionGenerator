@@ -257,7 +257,7 @@ public:
 			else
 			{
 				isRight = false;
-				cout << "´íÎó" << endl;
+				//cout << "´íÎó" << endl;
 			}
 
 			i++;

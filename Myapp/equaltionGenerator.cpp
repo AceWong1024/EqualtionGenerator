@@ -53,19 +53,31 @@ string EqualtionGenerator::getEqual(vector<int> & num, vector<char> & oper) {
 	int length = oper.size() + num.size();
 	string equaltion;
 	for (int i = 0; i < length; ++i) {
-		if (i % 2 == 0)
-			equaltion += to_string(num[i / 2]);
+		if (i % 2 == 0) {
+			if (flag && lbrack == i / 2) {
+				equaltion += '(';
+				equaltion += to_string(num[i / 2]);
+			}
+			else if (flag && rbrack == i / 2) {
+				equaltion += to_string(num[i / 2]);
+				equaltion += ')';
+			}
+			else {
+				equaltion += to_string(num[i / 2]);
+			}
+			
+		}
 		else
 			equaltion += oper[i / 2];
 	}
 	//insert brackets
-	if (flag && lbrack != -1 && rbrack != -1) {
-		equaltion.insert(2 * lbrack, 1, '(');
-		if (rbrack == num.size() - 1)
-			equaltion.insert(2 * rbrack, 1, ')');
-		else
-			equaltion.insert(2 * rbrack, 1, ')');
-	}
+	//if (flag && lbrack != -1 && rbrack != -1) {
+	//	equaltion.insert(2 * lbrack, 1, '(');
+	//	if (rbrack == num.size() - 1)
+	//		equaltion.insert(2 * (rbrack+1), 1, ')');
+	//	else
+	//		equaltion.insert(2 * (rbrack + 1), 1, ')');
+	//}
 	
 	return equaltion;
 }
